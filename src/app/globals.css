@@ -230,6 +230,10 @@ body {
     margin: 0 auto;
     @apply max-w-302 pr-6 pl-6;
   }
+
+  .custom-gradient {
+    @apply from-purple-pink-600 to-purple-pink-500 bg-linear-to-r;
+  }
 }
 
 @layer utilities {

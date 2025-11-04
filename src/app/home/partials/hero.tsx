@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <section
-      className='custom-container gap-2xl pt-5xl pb-2xl mt-16 flex flex-col items-center md:mt-55.5'
+      className='custom-container gap-2xl pt-5xl pb-2xl mt-16 flex flex-col items-center md:mt-55.5 md:pt-0 md:pb-65.5'
       id='hero'
     >
       {/* Alex's Portfolio */}
