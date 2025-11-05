@@ -5,7 +5,7 @@ import { achievementData } from '@/constants/achivement-data';
 
 const MyInfo = () => {
   return (
-    <div className='flex-start custom-container flex-col'>
+    <section id='about' className='flex-start custom-container flex-col'>
       {/* Video */}
       <div className='custom-gradient relative flex w-full rounded-xl'>
         <div
@@ -58,7 +58,7 @@ const MyInfo = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
