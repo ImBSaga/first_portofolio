@@ -5,12 +5,19 @@ type SectionProps = {
   title: string;
   subtitle: string;
   id?: string;
+  className?: string;
 };
 
-export const Section = ({ children, title, subtitle, id }: SectionProps) => {
+export const Section = ({
+  children,
+  title,
+  subtitle,
+  id,
+  className,
+}: SectionProps) => {
   return (
     <section
-      className='custom-container py-5xl md:py-8xl gap-4xl md:gap-6xl flex flex-col'
+      className={`custom-container py-5xl md:py-8xl gap-4xl md:gap-6xl flex flex-col ${className}`}
       id={id}
     >
       {/* heading */}
