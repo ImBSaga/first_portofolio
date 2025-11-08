@@ -13,6 +13,7 @@ const MyInfo = () => {
           style={{ height: 'clamp(7.875rem, 35vw, 28.75rem)' }}
         >
           <Image
+            priority
             src='/images/hero-image.png'
             fill
             alt='hero-image'
