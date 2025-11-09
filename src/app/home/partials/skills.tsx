@@ -1,5 +1,7 @@
 import { Section } from '@/components/layouts/section';
 import { skillData } from '@/constants/skills-data';
+import Orbital from './containers/orbital';
+import Image from 'next/image';
 
 const Skills = () => {
   return (
@@ -11,7 +13,9 @@ const Skills = () => {
     >
       <div className='gap-3xl flex flex-col items-center md:flex-row md:gap-0'>
         {/* Orbital */}
-        <div className='h-70 w-full md:h-128.75 md:w-146.75'></div>
+        <div className='flex w-full justify-center md:h-auto md:w-auto'>
+          <Orbital />
+        </div>
 
         {/* Skills */}
         <div className='gap-3xl md:gap-2xl flex w-full flex-col md:flex-1'>
