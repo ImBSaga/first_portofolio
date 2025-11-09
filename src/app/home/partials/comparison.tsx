@@ -1,97 +1,72 @@
-import { Section } from '@/components/layouts/section';
 import { comparisonData } from '@/constants/comparison-data';
 import Image from 'next/image';
 
 const Comparison = () => {
   return (
-    <Section
-      title='Why I Stand Out'
-      subtitle='A showcase of my unique approach and skill set compared to conventional front-end developers'
-    >
-      <table>
-        <thead>
-          <tr>
-            <th scope='col' className='border border-gray-300 p-2 text-left'>
-              Skill
-            </th>
-            <th scope='col' className='border border-gray-300 p-2 text-center'>
-              Me
-            </th>
-            <th scope='col' className='border border-gray-300 p-2 text-center'>
-              Other
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {comparisonData.map((comparison) => (
-            <tr key={comparison.name}>
-              <th
-                scope='row'
-                className='border border-gray-300 p-2 text-left font-medium'
-              >
-                {comparison.name}
-              </th>
-              <td
-                className='border border-gray-300 p-2 text-center'
-                aria-label={
-                  comparison.me
-                    ? 'I have this comparison'
-                    : 'I do not have this comparison'
-                }
-              >
-                {comparison.me ? (
-                  <Image
-                    src='/icons/icon-check.svg'
-                    alt='check'
-                    height={20}
-                    width={20}
-                    className='inline h-5 w-5 text-green-600'
-                    aria-hidden='true'
-                  />
-                ) : (
-                  <Image
-                    src='/icons/icon-uncheck.svg'
-                    alt='uncheck'
-                    height={20}
-                    width={20}
-                    className='inline h-5 w-5 text-red-600'
-                    aria-hidden='true'
-                  />
-                )}
-              </td>
-              <td
-                className='border border-gray-300 p-2 text-center'
-                aria-label={
-                  comparison.other
-                    ? 'Other has this comparison'
-                    : 'Other does not have this comparison'
-                }
-              >
-                {comparison.other ? (
-                  <Image
-                    src='/icons/icon-check.svg'
-                    alt='check'
-                    height={20}
-                    width={20}
-                    className='inline h-5 w-5 text-green-600'
-                    aria-hidden='true'
-                  />
-                ) : (
-                  <Image
-                    src='/icons/icon-uncheck.svg'
-                    alt='uncheck'
-                    height={20}
-                    width={20}
-                    className='inline h-5 w-5 text-red-600'
-                    aria-hidden='true'
-                  />
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Section>
+    <section className='custom-container py-5xl md:py-8xl gap-4xl md:gap-6xl flex flex-col'>
+      {/* heading */}
+      <div className='gap-lg flex flex-col items-center text-center'>
+        {/* Mobile */}
+        <h2 className='text-display-sm md:text-display-2xl font-extrabold text-neutral-100 md:hidden'>
+          What Sets Me Apart
+        </h2>
+        <p className='font-regular md:text-md text-sm text-neutral-200 md:hidden'>
+          A comparison of my approach and skills against typical programmers.
+        </p>
+
+        {/* Desktop */}
+        <h2 className='text-display-sm md:text-display-2xl hidden font-extrabold text-neutral-100 md:block'>
+          Why I Stand Out
+        </h2>
+        <p className='font-regular md:text-md hidden text-sm text-neutral-200 md:block'>
+          A showcase of my unique approach and skill set compared to
+          conventional front-end developers
+        </p>
+      </div>
+
+      {/* Content */}
+      <div className='py-3xl px-lg rounded-3xl bg-neutral-500'>
+        {/* Header */}
+        <div className='from-purple-pink-600 to-purple-pink-500 flex-center align-center py-md px-lg md:text-md rounded-full bg-linear-to-r text-sm font-semibold text-neutral-100 shadow-[0_4px_24px_0_rgba(135,70,235,0.32)] hover:opacity-90 md:py-3.25 md:font-bold'>
+          <p className='flex-6 text-center md:flex-1'>Skill</p>
+          <p className='flex-2 text-center md:flex-1'>Me</p>
+          <p className='flex-2 text-center md:flex-1'>Other</p>
+        </div>
+
+        {/* Body */}
+        {comparisonData.map((comparison, index) => {
+          const isLast = index === comparisonData.length - 1;
+          return (
+            <div
+              className={`py-3xl px-lg flex md:py-5.25 ${
+                isLast ? 'border-b-0' : 'border-b border-neutral-400'
+              } text-sm font-semibold text-neutral-100`}
+              key={comparison.name}
+            >
+              <p className='flex-6 text-center md:flex-1'>{comparison.name}</p>
+              <div className='flex-2 text-center md:flex-1'>
+                <Image
+                  src='/icons/icon-check.svg'
+                  alt='check'
+                  height={20}
+                  width={20}
+                  className='inline h-5 w-5 md:h-7 md:w-7'
+                />
+              </div>
+              <div className='flex-2 text-center md:flex-1'>
+                <Image
+                  src='/icons/icon-uncheck.svg'
+                  alt='uncheck'
+                  height={20}
+                  width={20}
+                  className='inline h-5 w-5 md:h-7 md:w-7'
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
