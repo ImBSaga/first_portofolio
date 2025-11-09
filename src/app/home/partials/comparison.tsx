@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Comparison = () => {
   return (
     <section className='custom-container py-5xl md:py-8xl gap-4xl md:gap-6xl flex flex-col'>
-      {/* heading */}
+      {/* Heading */}
       <div className='gap-lg flex flex-col items-center text-center'>
         {/* Mobile */}
         <h2 className='text-display-sm md:text-display-2xl font-extrabold text-neutral-100 md:hidden'>
