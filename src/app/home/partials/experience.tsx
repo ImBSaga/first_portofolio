@@ -7,6 +7,7 @@ const Experience = () => {
     <Section
       title='Experience in Front-End Development'
       subtitle='I have experience developing 30+ web projects across various industries, including marketplaces, health, fashion, sports, and more. Implemented 1000+ responsive web pages with interactive features and smooth animations'
+      id='projects'
     >
       <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
         {experienceData.map((experience, index) => (

@@ -12,6 +12,7 @@ const FAQ = () => {
     <Section
       title='Frequently Asked Question'
       subtitle='Find answers to some of the frequently asked questions below.'
+      id='FAQ'
     >
       <Accordion type='single' collapsible className='mx-auto max-w-180'>
         {FAQData.map((item, index) => (

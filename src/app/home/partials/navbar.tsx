@@ -78,29 +78,41 @@ const Navbar = () => {
             <SheetTrigger asChild>
               <Menu className='cursor-pointer lg:hidden' />
             </SheetTrigger>
+
             <SheetContent>
-              <nav className='mt-16'>
-                <ul className='flex flex-col gap-4'>
+              <Image
+                src='/images/logo.svg'
+                alt='logo'
+                width={28}
+                height={28}
+                className='h-7 w-7 md:h-10 md:w-10'
+              />
+
+              <nav className='mt-5'>
+                <ul className='gap-3xl flex flex-col'>
                   {navigationData.map((data) => (
                     <li key={data.label}>
                       <SheetClose asChild>
-                        <Link
-                          href={data.href}
-                          className='hover:text-primary-200 py-4'
-                        >
-                          {data.label}
-                        </Link>
+                        <Link href={data.href}>{data.label}</Link>
                       </SheetClose>
                     </li>
                   ))}
                 </ul>
               </nav>
 
-              <Button asChild className='mt-3 w-full'>
-                <SheetClose asChild>
-                  <Link href='#contact'>Get Started</Link>
-                </SheetClose>
-              </Button>
+              <SheetClose asChild>
+                <Link href='#contact'>
+                  <Button
+                    size='default'
+                    variant='default'
+                    iconSrc='/icons/icon-email.svg'
+                    iconLeft
+                    className='gap-sm w-full'
+                  >
+                    <span>Hire Me</span>
+                  </Button>
+                </Link>
+              </SheetClose>
             </SheetContent>
           </Sheet>
         </div>

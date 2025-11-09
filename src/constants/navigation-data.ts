@@ -22,7 +22,7 @@ export const navigationData: Navigation[] = [
   },
   {
     label: 'FAQ',
-    href: '#faq',
+    href: '#FAQ',
   },
   {
     label: 'Contact',
