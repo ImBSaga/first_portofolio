@@ -46,28 +46,26 @@ const ContactForm = () => {
   });
 
   async function onSubmit(data: z.infer<typeof contactSchema>) {
-    setVariant('success');
-    setShowDialog(true);
-    // try {
-    //   setLoading(true);
-    //   await emailjs.send(
-    //     process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-    //     process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-    //     {
-    //       name: data.name,
-    //       email: data.email,
-    //       message: data.message,
-    //     },
-    //     process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    //   );
-    //   form.reset();
-    //   setVariant('success');
-    // } catch (error) {
-    //   console.error('Error sending email:', error);
-    // } finally {
-    //   setShowDialog(true);
-    //   setLoading(false);
-    // }
+    try {
+      setLoading(true);
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      form.reset();
+      setVariant('success');
+    } catch (error) {
+      console.error('Error sending email:', error);
+    } finally {
+      setShowDialog(true);
+      setLoading(false);
+    }
   }
 
   return (
