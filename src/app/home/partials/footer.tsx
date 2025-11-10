@@ -29,7 +29,7 @@ const Footer = () => {
 
       <div className='flex-start gap-xl md:order-1'>
         <Image
-          src='/images/logo.svg'
+          src='/icons/icon-logo.svg'
           alt='logo'
           width={36}
           height={36}

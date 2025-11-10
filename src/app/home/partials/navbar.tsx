@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className='flex-between custom-container h-16 md:h-21'>
         <Image
-          src='/images/logo.svg'
+          src='/icons/icon-logo.svg'
           alt='logo'
           width={28}
           height={28}
@@ -81,7 +81,7 @@ const Navbar = () => {
 
             <SheetContent>
               <Image
-                src='/images/logo.svg'
+                src='/icons/icon-logo.svg'
                 alt='logo'
                 width={28}
                 height={28}
