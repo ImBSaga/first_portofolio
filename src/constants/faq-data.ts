@@ -5,28 +5,23 @@ type FAQItem = {
 
 export const FAQData: FAQItem[] = [
   {
-    title: 'What services do you offer?',
+    title: 'How do you ensure websites load quickly and efficiently? ',
     description:
-      "We provide end-to-end IT solutions, including web & mobile app development, cloud solutions, cybersecurity, AI & data analytics, and IT consulting. Whether you need a custom-built platform or infrastructure optimization, we've got you covered.",
+      'I use techniques like code splitting, lazy loading, and efficient asset management to optimize performance. I also implement caching strategies and ensure the code is optimized for production.',
   },
   {
-    title: 'How do you ensure the quality of your solutions?',
+    title: 'What’s your approach to front-end development?',
     description:
-      'We follow industry best practices, agile methodologies, and rigorous testing to ensure high-quality, secure, and scalable solutions. Our team continuously improves and optimizes based on feedback and performance analytics.',
+      'I focus on clean, maintainable code and prioritize user experience. My approach involves close collaboration with designers to ensure exact implementation and seamless interactions across all devices.',
   },
   {
-    title: 'How long does it take to complete a project?',
+    title: 'How do you handle project deadlines?',
     description:
-      'It depends on the complexity and scope of the project. Small projects may take a few weeks, while larger enterprise solutions can take several months. We provide a detailed project timeline during the consultation phase.',
+      'I use project management tools to keep track of deadlines and progress. I also communicate regularly with clients to ensure we stay on track and make any necessary adjustments.',
   },
   {
-    title: 'What industries do you serve?',
+    title: 'What technologies do you use?',
     description:
-      'We work across various industries, including finance, healthcare, e-commerce, retail, and technology startups. Our solutions are tailored to meet the unique challenges and opportunities of each sector.',
-  },
-  {
-    title: 'How can we start working together?',
-    description:
-      'It’s simple! Just contact us through our website or email, and we’ll schedule a consultation to discuss your needs, propose a tailored solution, and outline the next steps.',
+      'I use a variety of technologies, including React, Next.js, and Tailwind CSS. I also use tools like Git for version control and GitHub for collaboration.',
   },
 ];

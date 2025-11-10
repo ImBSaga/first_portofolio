@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { FAQData } from '@/constants/faq-data';
+import Image from 'next/image';
 
 const FAQ = () => {
   return (
@@ -14,10 +15,18 @@ const FAQ = () => {
       subtitle='Find answers to some of the frequently asked questions below.'
       id='FAQ'
     >
-      <Accordion type='single' collapsible className='mx-auto max-w-180'>
+      <Accordion
+        type='single'
+        collapsible
+        className='gap-xl md:gap-2xl flex flex-col'
+      >
         {FAQData.map((item, index) => (
           <AccordionItem key={index} value={index.toString()}>
-            <AccordionTrigger>{item.title}</AccordionTrigger>
+            <AccordionTrigger>
+              <p className='text-md font-semibold text-neutral-100 md:text-xl'>
+                {item.title}
+              </p>
+            </AccordionTrigger>
             <AccordionContent>{item.description}</AccordionContent>
           </AccordionItem>
         ))}
