@@ -17,7 +17,7 @@ export default function ExperienceCard({
     <div className='gap-lg md:gap-xl flex flex-col rounded-2xl'>
       {/* Image */}
       <div className='relative h-80 w-80 rounded-3xl md:h-92.5 md:w-92.5 md:rounded-4xl'>
-        <Image priority src={`${imageSrc}`} fill alt={name} />
+        <Image priority sizes='small' src={`${imageSrc}`} fill alt={name} />
       </div>
 
       {/* Content */}
