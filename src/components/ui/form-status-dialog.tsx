@@ -25,34 +25,34 @@ const FormStatusDialog: React.FC<FormStatusDialogProps> = ({
   return (
     <Dialog {...props}>
       <DialogContent>
-        <DialogHeader className='relative h-34.25 bg-linear-to-br from-[#0093DD] to-[#46AEE2] md:h-42'>
+        <DialogHeader>
           <Image
             src={
               variant === 'success'
-                ? '/icons/icon-form-message-success.svg'
-                : '/icons/icon-form-message-error.svg'
+                ? '/images/image-sent.svg'
+                : '/images/image-sent-fail.svg'
             }
             alt={variant === 'success' ? 'success' : 'error'}
-            width={220}
-            height={242}
-            className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 md:scale-160'
+            priority
+            sizes='small'
+            width={203}
+            height={159}
+            className='h-39.75 w-50.75 md:h-54.25 md:w-69.25'
           />
         </DialogHeader>
         <DialogBody>
           <DialogTitle>
             {variant === 'success'
-              ? 'Your message has been sent!'
-              : 'Oops! Your message couldn’t be sent.'}
+              ? 'Message Sent Successfully!'
+              : 'Message failed to send.'}
           </DialogTitle>
           <DialogDescription>
             {variant === 'success'
-              ? 'Thanks for contacting us. We’ll respond to you shortly.'
-              : 'Please try again later or check your internet connection.'}
+              ? 'Thank you for reaching out. I’ll get back to you as soon as possible'
+              : 'An unexpected error occurred. Kindly try again in a few moments.'}
           </DialogDescription>
           <DialogClose asChild>
-            <Button className='max-90.25 mx-auto mt-6 md:mt-8'>
-              {loading ? 'Loading...' : 'Back to Home'}
-            </Button>
+            <Button>{loading ? 'Loading...' : 'Back to Home'}</Button>
           </DialogClose>
         </DialogBody>
       </DialogContent>

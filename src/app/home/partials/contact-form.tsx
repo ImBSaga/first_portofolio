@@ -7,27 +7,11 @@ import { useForm } from 'react-hook-form';
 
 import { z } from 'zod';
 
-import { Section } from '@/components/layouts/section';
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import FormStatusDialog from '@/components/ui/form-status-dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
-const services = [
-  'Web Development',
-  'Cloud Solutions',
-  'Mobile App Development',
-  'Software Development',
-  'UI/UX Design',
-  'Other',
-];
 
 const contactSchema = z.object({
   name: z
@@ -44,9 +28,6 @@ const contactSchema = z.object({
     .min(1, { message: 'Message is required' })
     .min(20, 'Message must be at least 20 characters long')
     .max(500, 'Message must be at most 500 characters long'),
-  services: z.array(z.string()).refine((value) => value.some((item) => item), {
-    message: 'You have to select at least one service.',
-  }),
 });
 
 const ContactForm = () => {
@@ -61,43 +42,52 @@ const ContactForm = () => {
       name: '',
       email: '',
       message: '',
-      services: [],
     },
   });
 
   async function onSubmit(data: z.infer<typeof contactSchema>) {
-    try {
-      setLoading(true);
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          name: data.name,
-          email: data.email,
-          message: data.message,
-          services: data.services.join(', '),
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
-      form.reset();
-      setVariant('success');
-    } catch (error) {
-      console.error('Error sending email:', error);
-    } finally {
-      setShowDialog(true);
-      setLoading(false);
-    }
+    setVariant('success');
+    setShowDialog(true);
+    // try {
+    //   setLoading(true);
+    //   await emailjs.send(
+    //     process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+    //     process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+    //     {
+    //       name: data.name,
+    //       email: data.email,
+    //       message: data.message,
+    //     },
+    //     process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    //   );
+    //   form.reset();
+    //   setVariant('success');
+    // } catch (error) {
+    //   console.error('Error sending email:', error);
+    // } finally {
+    //   setShowDialog(true);
+    //   setLoading(false);
+    // }
   }
 
   return (
-    <Section
-      title='Let’s Build Something Great Together'
-      subtitle='Have a project in mind? Fill out the form below, and our team will get back to you shortly'
+    <section
       id='contact'
+      className='py-5xl px-2xl gap-3xl md:pt-8xl md:px-11xl md:gap-6xl flex flex-col md:flex-row md:items-center md:pb-25'
     >
+      {/* Heading */}
+      <div className='gap-lg flex flex-col md:flex-1'>
+        <h2 className='text-display-sm md:text-display-2xl text-left font-extrabold text-neutral-100'>
+          Contact Me
+        </h2>
+        <p className='font-regular md:text-md text-sm text-neutral-200'>
+          Feel free to drop a message for any inquiries or collaborations.
+        </p>
+      </div>
+
       <Form {...form}>
         <form
-          className='mx-auto max-w-180 space-y-5'
+          className='p-xl gap-xl md:p-3xl md:gap-2xl flex flex-col rounded-3xl bg-linear-to-b from-[rgba(38,38,38,1)] to-transparent md:flex-1 md:rounded-4xl'
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <FormField
@@ -105,12 +95,7 @@ const ContactForm = () => {
             name='name'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
-                <Input
-                  disabled={loading}
-                  placeholder='Input your name'
-                  {...field}
-                />
+                <Input disabled={loading} placeholder='Name' {...field} />
                 <FormMessage />
               </FormItem>
             )}
@@ -121,12 +106,7 @@ const ContactForm = () => {
             name='email'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
-                <Input
-                  disabled={loading}
-                  placeholder='Input your email'
-                  {...field}
-                />
+                <Input disabled={loading} placeholder='Email' {...field} />
                 <FormMessage />
               </FormItem>
             )}
@@ -137,12 +117,7 @@ const ContactForm = () => {
             name='message'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
-                <Textarea
-                  disabled={loading}
-                  placeholder='Input your message'
-                  {...field}
-                />
+                <Textarea disabled={loading} placeholder='Message' {...field} />
                 <FormMessage />
               </FormItem>
             )}
@@ -159,7 +134,7 @@ const ContactForm = () => {
         loading={loading}
         onOpenChange={setShowDialog}
       />
-    </Section>
+    </section>
   );
 };
 

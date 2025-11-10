@@ -22,11 +22,7 @@ const FAQ = () => {
       >
         {FAQData.map((item, index) => (
           <AccordionItem key={index} value={index.toString()}>
-            <AccordionTrigger>
-              <p className='text-md font-semibold text-neutral-100 md:text-xl'>
-                {item.title}
-              </p>
-            </AccordionTrigger>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
             <AccordionContent>{item.description}</AccordionContent>
           </AccordionItem>
         ))}
