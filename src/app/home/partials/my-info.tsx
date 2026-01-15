@@ -37,8 +37,8 @@ const MyInfo = () => {
           Who am I?
         </h2>
         <p className='md:text-md text-sm font-normal text-neutral-200 md:flex-[0.6]'>
-          Hi, I’m Alex, a Front-End Developer & Web Programming Instructor based
-          in Jakarta. With over{' '}
+          Hi, I’m Saga, a Front-End Developer & Web Programming Instructor based
+          in Bogor. With over{' '}
           <span className='text-neutral-100'>3 years of experience</span>, I
           specialize in crafting interactive, responsive, and user-friendly
           websites that deliver exceptional digital experiences. My expertise

@@ -35,7 +35,7 @@ const Footer = () => {
           height={36}
           className='h-9 w-9 md:h-10 md:w-10'
         />
-        <p className='text-sm font-normal text-neutral-200'>© alex2024</p>
+        <p className='text-sm font-normal text-neutral-200'>© Saga 2026</p>
       </div>
     </footer>
   );

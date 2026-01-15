@@ -7,11 +7,11 @@ const Hero = () => {
       className='custom-container gap-2xl pt-5xl pb-2xl mt-16 flex flex-col items-center md:mt-55.5 md:pt-0 md:pb-65.5'
       id='hero'
     >
-      {/* Alex's Portfolio */}
+      {/* Saga's Portfolio */}
       <div className='from-purple-pink-600 to-purple-pink-500 flex-center rounded-full bg-linear-to-r p-px text-white shadow-[0_4px_24px_0_rgba(135,70,235,0.32)] hover:opacity-90'>
         <div className='flex-center px-xl h-full w-full rounded-full bg-gray-900 py-[7px]'>
           <p className='md:text-md text-xs font-medium text-neutral-100'>
-            👨 Alex's Portfolio
+            👨 Saga's Portfolio
           </p>
         </div>
       </div>
@@ -28,7 +28,7 @@ const Hero = () => {
 
       {/* Description */}
       <p className='md:text-md text-center text-sm font-normal text-neutral-200'>
-        Hi, I’m Alex, a passionate web developer with over{' '}
+        Hi, I’m Saga, a passionate web developer with over{' '}
         <span className='text-neutral-100'>3 years of experience</span> in
         creating responsive websites. I also teach{' '}
         <br className='hidden md:block' />
