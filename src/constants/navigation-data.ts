@@ -6,7 +6,7 @@ type Navigation = {
 export const navigationData: Navigation[] = [
   {
     label: 'Home',
-    href: '#home',
+    href: '#hero',
   },
   {
     label: 'About',
@@ -21,8 +21,8 @@ export const navigationData: Navigation[] = [
     href: '#projects',
   },
   {
-    label: 'FAQ',
-    href: '#FAQ',
+    label: 'Certifications',
+    href: '#certifications',
   },
   {
     label: 'Contact',

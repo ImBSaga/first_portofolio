@@ -5,27 +5,35 @@ type Skill = {
 
 export const skillData: Skill[] = [
   {
-    name: 'HTML',
-    percentage: 100,
+    name: 'HTML5 & CSS3',
+    percentage: 95,
   },
   {
-    name: 'Redux',
+    name: 'JavaScript (ES6+)',
+    percentage: 90,
+  },
+  {
+    name: 'React.js',
+    percentage: 90,
+  },
+  {
+    name: 'Next.js',
     percentage: 85,
   },
   {
-    name: 'Javascript',
-    percentage: 90,
-  },
-  {
-    name: 'React',
-    percentage: 90,
-  },
-  {
-    name: 'CSS',
+    name: 'TypeScript',
     percentage: 80,
   },
   {
-    name: 'Typescript',
+    name: 'Tailwind CSS',
+    percentage: 85,
+  },
+  {
+    name: 'Redux Toolkit',
+    percentage: 80,
+  },
+  {
+    name: 'Python (Odoo)',
     percentage: 70,
   },
 ];

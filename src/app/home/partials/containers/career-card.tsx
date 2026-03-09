@@ -2,19 +2,21 @@ import Image from 'next/image';
 
 type CareerCardProps = {
   company: string;
+  role: string;
   date: string;
   details: string[];
 };
 
 export default function CareerCard({
   company,
+  role,
   date,
   details,
 }: CareerCardProps) {
   return (
     <div className='p-lg gap-lg md:p-3xl md:gap-2xl flex w-full flex-col rounded-4xl bg-neutral-500'>
       <h3 className='text-md md:text-display-xs font-bold text-neutral-100'>
-        Fronted Developer
+        {role}
       </h3>
 
       <div className='gap-lg flex flex-col md:flex-row md:items-center'>

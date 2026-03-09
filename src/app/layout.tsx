@@ -12,8 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'First Portfolio',
-  description: 'My First Portfolio',
+  title: 'Imam Bayu Saga | Frontend Developer Portfolio',
+  description:
+    'Portfolio of Imam Bayu Saga — Frontend Developer with 3+ years of experience building modern web applications using React.js, Next.js, TypeScript, and Tailwind CSS. Based in Bogor, West Java, Indonesia.',
 };
 
 export default function RootLayout({

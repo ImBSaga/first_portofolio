@@ -37,18 +37,23 @@ const MyInfo = () => {
           Who am I?
         </h2>
         <p className='md:text-md text-sm font-normal text-neutral-200 md:flex-[0.6]'>
-          Hi, I’m Saga, a Front-End Developer & Web Programming Instructor based
-          in Bogor. With over{' '}
-          <span className='text-neutral-100'>3 years of experience</span>, I
-          specialize in crafting interactive, responsive, and user-friendly
-          websites that deliver exceptional digital experiences. My expertise
-          spans across various industries, including e-commerce, education, and
-          SaaS. I am proficient in modern front-end technologies, clean coding
-          practices, and performance optimization.
+          Hi, I&apos;m <span className='text-neutral-100'>Imam Bayu Saga</span>,
+          a Frontend Developer based in{' '}
+          <span className='text-neutral-100'>Bogor, West Java, Indonesia</span>.
+          With <span className='text-neutral-100'>3+ years of experience</span>{' '}
+          at PT. Asia e-Services, I specialize in building responsive,
+          user-friendly web applications using{' '}
+          <span className='text-neutral-100'>
+            React.js, Next.js, TypeScript, and Tailwind CSS
+          </span>
+          . I also have hands-on experience customizing ERP systems with Python
+          (Odoo) and collaborating with cross-functional teams to deliver
+          scalable, high-performance solutions. My passion lies in clean UI,
+          performance optimization, and great user experiences.
         </p>
       </div>
 
-      {/* Projects */}
+      {/* Stats */}
       <div className='gap-lg lg:gap-2xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {achievementData.map((data, index) => (
           <AchievementCard

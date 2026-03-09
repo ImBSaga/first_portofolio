@@ -33,6 +33,7 @@ const Career = () => {
               {/* Career Card */}
               <CareerCard
                 company={career.company}
+                role={career.role}
                 date={career.date}
                 details={career.details}
               />
