@@ -35,16 +35,34 @@ const Hero = () => {
         React, Next.js, TypeScript, and Tailwind CSS.
       </p>
 
-      {/* Button */}
-      <Link className='w-full md:w-fit' href='#projects'>
-        <Button
-          size='default'
-          variant='default'
-          className='h-12 w-full md:w-fit'
+      <div className='flex w-full flex-col gap-4 md:w-fit md:flex-row'>
+        <Link className='w-full md:w-fit' href='#projects'>
+          <Button
+            size='default'
+            variant='default'
+            iconSrc='/icons/icon-visit.svg'
+            iconLeft
+            className='gap-sm w-full md:w-64'
+          >
+            <span>View Projects</span>
+          </Button>
+        </Link>
+        <a
+          href='/resume.pdf'
+          download='Imam_Bayu_Saga_Resume.pdf'
+          className='w-full md:w-fit'
         >
-          View My Work
-        </Button>
-      </Link>
+          <Button
+            size='default'
+            variant='default'
+            iconSrc='/icons/icon-download.svg'
+            iconLeft
+            className='gap-sm w-full md:w-64'
+          >
+            <span>Download CV</span>
+          </Button>
+        </a>
+      </div>
     </section>
   );
 };

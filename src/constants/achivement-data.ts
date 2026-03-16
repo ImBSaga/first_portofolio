@@ -9,15 +9,15 @@ export const achievementData: Achievement[] = [
     p: 'Years Experience',
   },
   {
-    h3: '30+',
-    p: 'Projects',
-  },
-  {
-    h3: '90+',
-    p: 'Student',
-  },
-  {
     h3: '20+',
-    p: 'Happy Clients',
+    p: 'Public Repositories',
+  },
+  {
+    h3: '30+',
+    p: 'Project Contributions',
+  },
+  {
+    h3: '100%',
+    p: 'Commitment',
   },
 ];

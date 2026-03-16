@@ -3,9 +3,25 @@ type Project = {
   description: string;
   skills: string[];
   githubUrl: string;
+  liveUrl?: string;
 };
 
 export const projectData: Project[] = [
+  {
+    name: 'Call Analytics Dashboard App',
+    description:
+      'A comprehensive call analytics dashboard built with Next.js, featuring real-time data visualization, call volume tracking, and performance metrics analysis. Integrated with modern charting libraries for actionable insights.',
+    skills: [
+      'Next.js 15',
+      'TypeScript',
+      'Tailwind CSS',
+      'Recharts',
+      'Lucide React',
+      'Shadcn UI',
+    ],
+    githubUrl: 'https://github.com/ImBSaga/call-analytics-dashboard-app',
+    liveUrl: 'https://call-analytics-dashboard-app.vercel.app',
+  },
   {
     name: 'Restaurant Discovery & Food Ordering App',
     description:
@@ -21,6 +37,7 @@ export const projectData: Project[] = [
       'Shadcn UI',
     ],
     githubUrl: 'https://github.com/ImBSaga/restaurant-app',
+    liveUrl: 'https://restaurant-app-theta-sepia.vercel.app',
   },
   {
     name: 'Full-Featured Social Media Web App',
@@ -37,6 +54,7 @@ export const projectData: Project[] = [
       'Shadcn UI',
     ],
     githubUrl: 'https://github.com/ImBSaga/social-media-app',
+    liveUrl: 'https://social-media-app-pi-five.vercel.app',
   },
   {
     name: 'Library Management & Book Lending App',
@@ -53,5 +71,6 @@ export const projectData: Project[] = [
       'Zod',
     ],
     githubUrl: 'https://github.com/ImBSaga/library-app',
+    liveUrl: 'https://library-app-zeta-beige.vercel.app',
   },
 ];

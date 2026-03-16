@@ -1,33 +1,37 @@
 import Image from 'next/image';
 import AchievementCard from './containers/achievement-card';
+import { Button } from '@/components/ui/button';
 
 import { achievementData } from '@/constants/achivement-data';
 
 const MyInfo = () => {
   return (
     <section id='about' className='flex-start custom-container flex-col'>
-      {/* Video */}
-      <div className='custom-gradient relative flex w-full rounded-xl'>
+      {/* Photo Section */}
+      <div className='custom-gradient relative flex w-full flex-col items-center rounded-xl p-8 md:p-12'>
         <div
-          className='relative w-full'
-          style={{ height: 'clamp(7.875rem, 35vw, 28.75rem)' }}
+          className='border-purple-pink-500 relative overflow-hidden rounded-full border-4 shadow-2xl'
+          style={{ width: '250px', height: '250px' }}
         >
           <Image
             priority
-            src='/images/hero-image.png'
+            src='/images/my-photo.jpg' // User should replace this with their LinkedIn photo
             fill
-            alt='hero-image'
-            className='object-contain'
+            alt='Imam Bayu Saga'
+            className='object-cover'
           />
         </div>
 
-        <div className='absolute top-1/2 left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 md:h-18 md:w-18'>
-          <Image
-            src='/icons/icon-play.svg'
-            fill
-            alt='play'
-            className='object-contain'
-          />
+        <div className='mt-8 flex flex-col items-center gap-4'>
+          <a href='/resume.pdf' download='Imam_Bayu_Saga_Resume.pdf'>
+            <Button
+              iconSrc='/icons/icon-download.svg'
+              iconLeft
+              className='gap-sm px-8 py-6 text-lg font-bold'
+            >
+              <span>Download Resume</span>
+            </Button>
+          </a>
         </div>
       </div>
 

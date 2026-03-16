@@ -25,6 +25,10 @@ export const navigationData: Navigation[] = [
     href: '#certifications',
   },
   {
+    label: 'Resume',
+    href: '#resume',
+  },
+  {
     label: 'Contact',
     href: '#contact',
   },
