@@ -40,8 +40,6 @@ const Hero = () => {
           <Button
             size='default'
             variant='default'
-            iconSrc='/icons/icon-visit.svg'
-            iconLeft
             className='gap-sm w-full md:w-64'
           >
             <span>View Projects</span>
