@@ -24,7 +24,7 @@ const Projects = () => {
         {projectData.map((project, index) => (
           <div
             key={index}
-            className='p-lg gap-lg md:p-3xl md:gap-xl flex flex-col rounded-4xl bg-neutral-500 transition-colors duration-300 hover:bg-neutral-400'
+            className='p-lg gap-lg md:p-3xl md:gap-xl flex flex-col rounded-4xl bg-neutral-500 transition-all duration-300 hover:bg-neutral-400 hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(135,70,235,0.15)]'
           >
             {/* Project Number */}
             <div className='from-purple-pink-600 to-purple-pink-500 flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-r'>

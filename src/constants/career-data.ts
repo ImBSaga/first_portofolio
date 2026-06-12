@@ -19,6 +19,16 @@ export const careerData: Career[] = [
     ],
   },
   {
+    company: 'London Success Academy',
+    role: 'Software Developer Intern (Remote / UK-based)',
+    date: 'Mar 2026',
+    details: [
+      'Participated in a competitive Career Accelerator Internship Program focused on real-world software and web development projects.',
+      'Gained hands-on experience with modern development practices, mentorship from industry professionals, and collaborative project work.',
+      'Enhanced skills in frontend technologies, problem-solving, and professional software development.',
+    ],
+  },
+  {
     company: 'Android Community CCIT-FTUI',
     role: 'Android Development Mentor',
     date: 'Sep 2020 – Aug 2021',

@@ -14,7 +14,7 @@ export default function CareerCard({
   details,
 }: CareerCardProps) {
   return (
-    <div className='p-lg gap-lg md:p-3xl md:gap-2xl flex w-full flex-col rounded-4xl bg-neutral-500'>
+    <div className='p-lg gap-lg md:p-3xl md:gap-2xl flex w-full flex-col rounded-4xl bg-neutral-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(135,70,235,0.15)] hover:bg-neutral-500/90'>
       <h3 className='text-md md:text-display-xs font-bold text-neutral-100'>
         {role}
       </h3>
