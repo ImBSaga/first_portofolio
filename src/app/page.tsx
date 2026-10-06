@@ -3,6 +3,7 @@ import Hero from './home/partials/hero';
 import MyInfo from './home/partials/my-info';
 import Career from './home/partials/career';
 import Skills from './home/partials/skills';
+import FeaturedProdigi from './home/partials/featured-prodigi';
 import Projects from './home/partials/projects';
 import Certifications from './home/partials/certifications';
 import ResumeIframe from './home/partials/resume';
@@ -18,6 +19,7 @@ export default function Home() {
       <MyInfo />
       <Skills />
       <Career />
+      <FeaturedProdigi />
       <Projects />
       <Certifications />
       <ResumeIframe />

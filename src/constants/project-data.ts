@@ -1,12 +1,29 @@
-type Project = {
+export type Project = {
   name: string;
   description: string;
   skills: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
+  isPrivate?: boolean;
 };
 
 export const projectData: Project[] = [
+  {
+    name: 'Prodigi UMKM – Enterprise AI Mentoring & Business Platform',
+    description:
+      'A multi-app enterprise ecosystem empowering Indonesian MSMEs with AI business audits, stateful AI mentoring with continuous business memory, automated intelligence reports, and ERP integration.',
+    skills: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS 4',
+      'Odoo 18 (Python)',
+      'pgvector',
+      'WhatsApp Gateway',
+    ],
+    liveUrl: 'https://prodigiumkm.net',
+    isPrivate: true,
+  },
   {
     name: 'Call Analytics Dashboard App',
     description:
